@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>Money</title>
+</head>
+<script>
+    function Calculate(baht){
+        var baht,hnungphan,haroy,hnungroy,hazip,yizip,ten,five,two,one;
+        hnungphan = Math.floor(baht/1000);
+        baht =baht-(hnungphan*1000)
+        
+
+        haroy = Math.floor(baht/500);
+        baht =baht-(haroy*500);
+        
+
+        hnungroy = Math.floor(baht/100);
+        baht =baht-(hnungroy*100);
+        
+
+        hazip = Math.floor(baht/50);
+        baht =baht-(hazip*50);
+        
+
+        yizip = Math.floor(baht/20);
+        baht =baht-(yizip *20);
+        
+
+        ten = Math.floor(baht/10);
+        baht =baht-(ten*10);
+        
+        
+		five = Math.floor(baht/5);
+        baht =baht-(five*5);
+        
+        
+		two = Math.floor(baht/2);
+        baht =baht-(two*2);
+        
+        
+		one = baht/1;
+        baht=baht-(one*1);
+        
+
+        if(hnungphan==0){
+            document.getElementById('div1').innerHTML=("แบงค์ 1000 : ");
+        }else{
+            document.getElementById('div1').innerHTML=("แบงค์ 1000 : " + hnungphan +"ใบ");
+        }
+        if(haroy==0){
+            document.getElementById('div2').innerHTML=("แบงค์ 500 : ");
+        }else{
+            document.getElementById('div2').innerHTML=("แบงค์ 500 : " + haroy +"ใบ");
+        }
+        if(hnungroy==0){
+            document.getElementById('div3').innerHTML=("แบงค์ 100 : ");
+        }else{
+            document.getElementById('div3').innerHTML=("แบงค์ 100 : " + hnungroy +"ใบ");
+        }
+        if(hazip==0){
+            document.getElementById('div4').innerHTML=("แบงค์ 50 : ");
+        }else{
+            document.getElementById('div4').innerHTML=("แบงค์ 50 : " + hazip +"ใบ");
+        }
+        if(yizip==0){
+            document.getElementById('div5').innerHTML=("แบงค์ 20 : ");
+        }else{
+            document.getElementById('div5').innerHTML=("แบงค์ 20 : " + yizip +"ใบ");
+        }
+        if(ten==0){
+            document.getElementById('div6').innerHTML=("เหรียญ 10 : ");
+        }else{
+            document.getElementById('div6').innerHTML=("เหรียญ 10 : " + ten +"เหรียญ");
+        }
+        if(five==0){
+            document.getElementById('div7').innerHTML=("เหรียญ 5 : ");
+        }else{
+            document.getElementById('div7').innerHTML=("เหรียญ 5 : " + five +"เหรียญ");
+        }
+        if(two==0){
+            document.getElementById('div8').innerHTML=("เหรียญ 2 : ");
+        }else{
+            document.getElementById('div8').innerHTML=("เหรียญ 2 : " + two +"เหรียญ");
+        }
+        if(one==0){
+            document.getElementById('div9').innerHTML=("เหรียญ 1 :");;
+        }else{
+            document.getElementById('div9').innerHTML=("เหรียญ 1 :" +  one +"เหรียญ");
+        
+
+
+        }
+        
+    }
+
+</script>
+<body>
+    <input type="number" id="baht">
+    <button onclick="Calculate(baht.value)"> Convert </button><br>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+    <div id="div7"></div>
+    <div id="div8"></div>
+    <div id="div9"></div>
+
+</body>
+
+</html>
