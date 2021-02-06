@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Body</title>
+</head>
+<BODY BACKGROUND="sa.3.gif"></BODY>
+<script>
+    function tem(k1,k2){
+       var  k1,k2;
+       bmi = k1/(k2*k2)
+       console.log(bmi);
+       if(bmi<18.50){
+           document.getElementById('div1').innerHTML=("น้ำหนักน้อย / ผอม");
+       }else if(bmi>=18.50&&bmi<=22.90){
+           document.getElementById('div1').innerHTML=("ปกติ (สุขภาพดี)");
+       }else if(bmi>=23&&bmi<=24.90){
+           document.getElementById('div1').innerHTML=("ท้วม / โรคอ้วนระดับ1");
+       }else if(bmi>=25&&bmi<=29.90){
+           document.getElementById('div1').innerHTML=("อ้วน / โรคอ้วนระดับ2");
+       }else if(bmi>30){
+           document.getElementById('div1').innerHTML=("อ้วนมาก / โรคอ้วนระดับ3");
+       }
+   }
+</script>
+<body>
+    ใส่น้ำหนักและส่วนสูงของท่าน(ส่วนสูง(เมตร))<br/>
+   <input type="number" id="k1">
+   <input type="number" id="k2">
+   <button onclick="tem(k1.value,k2.value)"> Show </button><br>
+   <div id="div1"></div>
+</body>
+</html>
+
